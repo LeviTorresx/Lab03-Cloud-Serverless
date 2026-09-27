@@ -1,0 +1,171 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-09-27T19:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v11.0.0",
+  "resources": [
+    {
+      "_id": "wrk_crud_books",
+      "parentId": null,
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "name": "CRUD Books API",
+      "description": "CRUD de libros con AWS Lambda, API Gateway y DynamoDB",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_crud_books",
+      "parentId": "wrk_crud_books",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://71y62tja4b.execute-api.us-east-1.amazonaws.com",
+        "book_id": ""
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_libros",
+      "parentId": "wrk_crud_books",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "name": "Libros",
+      "description": "Endpoints CRUD de libros",
+      "environment": {},
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_crear",
+      "parentId": "fld_libros",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "url": "{{ _.base_url }}/libros",
+      "name": "Crear libro",
+      "description": "Crear un nuevo libro",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Cien años de soledad\",\n  \"autor\": \"Gabriel García Márquez\",\n  \"genero\": \"Realismo mágico\",\n  \"precio\": 45000,\n  \"stock\": 10\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 1,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_listar",
+      "parentId": "fld_libros",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "url": "{{ _.base_url }}/libros",
+      "name": "Listar libros",
+      "description": "Listar todos los libros",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 2,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_obtener",
+      "parentId": "fld_libros",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "url": "{{ _.base_url }}/libros/{{ _.book_id }}",
+      "name": "Obtener libro",
+      "description": "Obtener un libro por ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 3,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_actualizar",
+      "parentId": "fld_libros",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "url": "{{ _.base_url }}/libros/{{ _.book_id }}",
+      "name": "Actualizar libro",
+      "description": "Actualizar un libro existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"titulo\": \"Cien años de soledad - Edición especial\",\n  \"autor\": \"Gabriel García Márquez\",\n  \"genero\": \"Realismo mágico\",\n  \"precio\": 55000,\n  \"stock\": 20\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 4,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_eliminar",
+      "parentId": "fld_libros",
+      "modified": 1779994800000,
+      "created": 1779994800000,
+      "url": "{{ _.base_url }}/libros/{{ _.book_id }}",
+      "name": "Eliminar libro",
+      "description": "Eliminar un libro por ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}
