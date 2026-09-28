@@ -1,8 +1,8 @@
 # CRUD Serverless de Libros con AWS Lambda, API Gateway y DynamoDB
 
-Laboratorio 3 — Cloud Computing · Universidad de Antioquia · 2026
+Laboratorio 3 — Cloud Computing · Universidad de Antioquia · 2026/2
 
-**Integrantes:** Jimmy W. Gómez Ramos · [Nombre del compañero]
+**Integrantes:** Jimmy W. Gómez Ramos · Levis Javier Aguiar Torres
 
 API REST completamente serverless para administrar libros (crear, consultar, actualizar y eliminar). Cada operación es una función AWS Lambda expuesta por API Gateway (HTTP API), los datos se guardan en una tabla de Amazon DynamoDB y toda la infraestructura se define como código con Serverless Framework en un único archivo `serverless.yml`.
 
@@ -52,7 +52,7 @@ Cualquier error inesperado responde 500 con `{"error": "Error interno del servid
 ## Instalación
 
 ```bash
-git clone <URL-DEL-REPOSITORIO>
+git clone https://github.com/LeviTorresx/Lab03-Cloud-Serverless.git
 cd Lab03-Cloud-Serverless
 npm install
 ```
